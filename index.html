@@ -3,24 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliotēkas sistēma</title>
+    <title>Atkritumu šķirošanas konteineri</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <h1>Bibliotēkas sistēma</h1>
+        <header>
+            <h1>🗑️ Atkritumu šķirošanas konteineri</h1>
+            <p>Atrodi tuvāko konteineri savam atkritumu veidam</p>
+        </header>
 
-        <div class="form">
-            <input type="text" id="title" placeholder="Grāmatas nosaukums">
-            <input type="text" id="author" placeholder="Autors">
-            <button onclick="addBook()">Pievienot</button>
+        <!-- Filtru pogas -->
+        <div class="filter-section">
+            <h2>Izvēlies atkritumu veidu:</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Visi</button>
+                <button class="filter-btn" data-category="plastmasa">♻️ Plastmasa</button>
+                <button class="filter-btn" data-category="stikls">🫙 Stikls</button>
+                <button class="filter-btn" data-category="papirs">📄 Papīrs</button>
+                <button class="filter-btn" data-category="elektronika">💻 Elektronika</button>
+                <button class="filter-btn" data-category="drebes">👕 Drēbes</button>
+                <button class="filter-btn" data-category="baterijas">🔋 Baterijas</button>
+                <button class="filter-btn" data-category="bio">🥬 Bio atkritumi</button>
+            </div>
         </div>
 
-        <input type="text" id="search" placeholder="Meklēt grāmatu..." onkeyup="searchBooks()">
+        <!-- Meklēšana -->
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Meklēt pēc adreses vai nosaukuma...">
+        </div>
 
-        <div id="book-list"></div>
+        <!-- Konteineru saraksts -->
+        <div class="containers-grid" id="containers-grid">
+            <!-- Konteineri tiks ģenerēti ar JavaScript -->
+        </div>
+
+        <!-- Informācijas sadaļa -->
+        <section class="info-section">
+            <h2>Kā pareizi šķirot atkritumus?</h2>
+            <div class="info-cards">
+                <div class="info-card plastmasa">
+                    <h3>♻️ Plastmasa</h3>
+                    <p>PET pudeles, plastmasas iepakojumi, plēves, maisiņi</p>
+                </div>
+                <div class="info-card stikls">
+                    <h3>🫙 Stikls</h3>
+                    <p>Stikla pudeles, burkas (bez vāciņiem)</p>
+                </div>
+                <div class="info-card papirs">
+                    <h3>📄 Papīrs</h3>
+                    <p>Avīzes, žurnāli, kartona kastes, biroja papīrs</p>
+                </div>
+                <div class="info-card elektronika">
+                    <h3>💻 Elektronika</h3>
+                    <p>Vecie telefoni, datori, TV, sadzīves tehnika</p>
+                </div>
+                <div class="info-card drebes">
+                    <h3>👕 Drēbes</h3>
+                    <p>Lietota apģērba, apavi, tekstilizstrādājumi</p>
+                </div>
+                <div class="info-card baterijas">
+                    <h3>🔋 Baterijas</h3>
+                    <p>Visu veidu baterijas un akumulatori</p>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <footer>
+        <p>© 2024 Atkritumu šķirošanas sistēma | Saudzē dabu! 🌍</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
