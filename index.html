@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotēkas sistēma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="container">
+        <h1>Bibliotēkas sistēma</h1>
+
+        <div class="form">
+            <input type="text" id="title" placeholder="Grāmatas nosaukums">
+            <input type="text" id="author" placeholder="Autors">
+            <button onclick="addBook()">Pievienot</button>
+        </div>
+
+        <input type="text" id="search" placeholder="Meklēt grāmatu..." onkeyup="searchBooks()">
+
+        <div id="book-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
